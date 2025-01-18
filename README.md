@@ -24,7 +24,7 @@ A graph of connections in a social network of students from the University of
 North Carolina.
 
 ```python
-dataset = CollegiateDataset(data_path, "unc28")
+dataset = CollegiateSocNet(data_path, "unc28")
 sensitive_attribute = dataset.get_sensitive_attribute()
 ```
 
@@ -33,7 +33,7 @@ A graph of connections in a social network of students from the University
 of Oklahoma.
 
 ```python
-dataset = CollegiateDataset(data_path, "oklahoma97")
+dataset = CollegiateSocNet(data_path, "oklahoma97")
 sensitive_attribute = dataset.get_sensitive_attribute()
 ```
 
