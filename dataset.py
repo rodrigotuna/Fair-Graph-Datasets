@@ -82,6 +82,9 @@ class NBADataset(InMemoryDataset):
             data_list = [self.pre_transform(data) for data in data_list]
 
         torch.save(self.collate(data_list), self.processed_paths[0])
+
+    def get_sensitive_attribute(self):
+        return self.get(0).x[:,36].detach().clone()
         
 
 
@@ -164,3 +167,6 @@ class CollegiateSocNet(InMemoryDataset):
             data_list = [self.pre_transform(data) for data in data_list]
 
         torch.save(self.collate(data_list), self.processed_paths[0])
+
+    def get_sensitive_attribute(self):
+        self.get(0).x[:,1].detach().clone()
